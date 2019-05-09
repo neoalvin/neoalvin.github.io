@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hexo+Next+Github Pages搭建博客全流程]]></title>
     <url>%2F2019%2F05%2F10%2FHexo-Next-Github-Pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%85%A8%E6%B5%81%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[环境准备正式搭建博客前，我们需要检查环境上是否已安装下列程序： GitNodejsHexo博客搭建//TODO]]></content>
+    <content type="text"><![CDATA[环境准备正式搭建博客前，我们需要检查环境上是否已安装下列程序： Git Nodejs Hexo 博客搭建//TODO]]></content>
       <categories>
         <category>总结分享</category>
       </categories>
@@ -14,11 +14,6 @@
         <tag>Git</tag>
         <tag>Github Pages</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Test Admin]]></title>
-    <url>%2F2019%2F05%2F09%2FTest-Admin%2F</url>
-    <content type="text"><![CDATA[Test Admin Just test for hexo admin.]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
