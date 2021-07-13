@@ -1,0 +1,611 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SpringCloud学习总结之配置文件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="SpringCloud基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Android
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Android/四大组件.html">
+            
+                <a href="../Android/四大组件.html">
+            
+                    
+                    四大组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Spring Cloud
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="SpringCloud基础.html">
+            
+                <a href="SpringCloud基础.html">
+            
+                    
+                    SpringCloud基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="SpringCloud学习总结之配置文件.html">
+            
+                <a href="SpringCloud学习总结之配置文件.html">
+            
+                    
+                    SpringCloud学习总结之配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    效率工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../效率工具/Gitbook安装.html">
+            
+                <a href="../效率工具/Gitbook安装.html">
+            
+                    
+                    Gitbook安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../效率工具/Gitbook生成目录SUMMARY文件.html">
+            
+                <a href="../效率工具/Gitbook生成目录SUMMARY文件.html">
+            
+                    
+                    Gitbook生成目录SUMMARY文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../数据库/Windows安装MySQL方法.html">
+            
+                <a href="../数据库/Windows安装MySQL方法.html">
+            
+                    
+                    Windows安装MySQL方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../算法/11.盛最多水的容器.html">
+            
+                <a href="../算法/11.盛最多水的容器.html">
+            
+                    
+                    11.盛最多水的容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../算法/14.最长公共前缀.html">
+            
+                <a href="../算法/14.最长公共前缀.html">
+            
+                    
+                    14.最长公共前缀
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../算法/15.三数之和.html">
+            
+                <a href="../算法/15.三数之和.html">
+            
+                    
+                    15.三数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../算法/16.最接近的三数之和.html">
+            
+                <a href="../算法/16.最接近的三数之和.html">
+            
+                    
+                    16.最接近的三数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../算法/26.删除有序数组中的重复项.html">
+            
+                <a href="../算法/26.删除有序数组中的重复项.html">
+            
+                    
+                    26.删除有序数组中的重复项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../算法/43.字符串相乘.html">
+            
+                <a href="../算法/43.字符串相乘.html">
+            
+                    
+                    43.字符串相乘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../算法/5.最长回文子串.html">
+            
+                <a href="../算法/5.最长回文子串.html">
+            
+                    
+                    5.最长回文子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../算法/53.最大子序和.html">
+            
+                <a href="../算法/53.最大子序和.html">
+            
+                    
+                    53.最大子序和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../算法/7.整数反转.html">
+            
+                <a href="../算法/7.整数反转.html">
+            
+                    
+                    7.整数反转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../算法/9.回文数.html">
+            
+                <a href="../算法/9.回文数.html">
+            
+                    
+                    9.回文数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    缓存
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../缓存/Redis学习（1）基本介绍.html">
+            
+                <a href="../缓存/Redis学习（1）基本介绍.html">
+            
+                    
+                    Redis学习（1）基本介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >SpringCloud学习总结之配置文件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="springcloud&#x5B66;&#x4E60;&#x603B;&#x7ED3;&#x4E4B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">SpringCloud&#x5B66;&#x4E60;&#x603B;&#x7ED3;&#x4E4B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h1>
+<p>SpringCloud&#x7684;&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x7684;src/main/resources&#xFF0C;&#x5176;&#x4E2D;application.properties&#x662F;SpringCloud&#x7684;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7AEF;&#x53E3;&#x53F7;&#x3001;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x3001;&#x6570;&#x636E;&#x6E90;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x81EA;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x3002;</p>
+<h2 id="1&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x683C;&#x5F0F;">1.&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x683C;&#x5F0F;</h2>
+<p>SpringCloud&#x4E2D;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;.properties&#x683C;&#x5F0F;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x652F;&#x6301;.yml&#xFF08;YAML&#xFF09;&#x683C;&#x5F0F;&#xFF0C;&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x4FE1;&#x606F;&#x53C2;&#x8003;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># YAML&#x683C;&#x5F0F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+<span class="hljs-attr">server:</span>
+  <span class="hljs-comment"># &#x914D;&#x7F6E;&#x670D;&#x52A1;&#x7AEF;&#x53E3;</span>
+<span class="hljs-attr">  port:</span> <span class="hljs-number">8081</span>
+<span class="hljs-attr">eureka:</span>
+<span class="hljs-attr">  client:</span>
+<span class="hljs-attr">    service-url:</span>
+      <span class="hljs-comment"># &#x914D;&#x7F6E;eureka&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</span>
+<span class="hljs-attr">      defaultZone:</span> http://localhost:<span class="hljs-number">8081</span>/eureka
+</code></pre>
+<pre><code class="lang-properties"># Properties&#x683C;&#x5F0F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+# &#x914D;&#x7F6E;&#x670D;&#x52A1;&#x7AEF;&#x53E3;
+server.port: 8081
+# &#x914D;&#x7F6E;eureka&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;
+eureka.client.service-url.defaultZone: http://localhost:8081/eureka
+</code></pre>
+<h2 id="2&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x5F15;&#x7528;">2.<strong>&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x5F15;&#x7528;</strong></h2>
+<p>Spring Cloud&#x53EF;&#x4EE5;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x548C;&#x4EE3;&#x7801;&#x4E2D;&#x901A;&#x8FC7;${key}&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x5DF2;&#x914D;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x8C03;&#x7528;${random}&#x6765;&#x751F;&#x6210;&#x968F;&#x673A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3001;int&#x3001;long&#x7B49;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#xFF08;1&#xFF09;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x5F15;&#x7528;&#x524D;&#x9762;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#x503C;</p>
+<pre><code class="lang-properties">#&#x670D;&#x52A1;ID
+service.id=${random.int(16)}
+#&#x670D;&#x52A1;&#x540D;
+service.name=service-demo 
+#&#x670D;&#x52A1;&#x5730;&#x5740;
+service.url=https://${service.name}.com
+</code></pre>
+<p>&#xFF08;2&#xFF09;&#x4EE3;&#x7801;&#x4E2D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;@Value&#x6CE8;&#x89E3;&#x5F15;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#x503C;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ServiceInfo</span> </span>{
+    <span class="hljs-meta">@Value</span>(<span class="hljs-string">&quot;${service.name}&quot;</span>)
+    <span class="hljs-keyword">private</span> String serviceName;
+
+    <span class="hljs-meta">@Value</span>(<span class="hljs-string">&quot;${service.url}&quot;</span>)
+    <span class="hljs-keyword">private</span> String serviceUrl;
+}
+</code></pre>
+<h2 id="3&#x591A;&#x73AF;&#x5883;&#x914D;&#x7F6E;">3.&#x591A;&#x73AF;&#x5883;&#x914D;&#x7F6E;</h2>
+<p>&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x6EE1;&#x8DB3;&#x5F00;&#x53D1;&#x3001;&#x6D4B;&#x8BD5;&#x3001;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x7684;&#x9694;&#x79BB;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x51C6;&#x5907;&#x591A;&#x5957;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;application-{profile}.properties&#x7684;&#x5F62;&#x5F0F;&#x653E;&#x5728;&#x8DDF;application.properties&#x540C;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5E76;&#x5728;application.properties&#x4E2D;&#x901A;&#x8FC7;&#x6307;&#x5B9A;spring.profiles.active={profile}&#x6765;&#x6FC0;&#x6D3B;&#x5F53;&#x524D;&#x73AF;&#x5883;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x4F8B;&#x5982;&#x5982;&#x4E0B;&#x4E09;&#x79CD;&#x73AF;&#x5883;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>application-dev.properties</li>
+<li>application-test.properties</li>
+<li>application-prod.properties</li>
+</ul>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5F53;&#x524D;&#x662F;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x5219;&#x53EA;&#x9700;&#x8981;&#x5728;application.properties&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E0B;&#x9762;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-properties">spring.profiles.active=dev
+</code></pre>
+<h2 id="4&#x52A0;&#x8F7D;&#x987A;&#x5E8F;">4.&#x52A0;&#x8F7D;&#x987A;&#x5E8F;</h2>
+<p>bootstrap.yml&#xFF1A;&#x4F4D;&#x4E8E;jar&#x5305;&#x5916;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x9AD8;</p>
+<p>application.yml&#xFF1A; &#x914D;&#x7F6E;&#x4E2D;&#x5FC3;&#x7684;&#x6587;&#x4EF6; &gt; JVM&#x53C2;&#x6570;&#x914D;&#x7F6E;&gt; &#x672C;&#x5730;active&#x6307;&#x5B9A;&#x6587;&#x4EF6; &gt; &#x672C;&#x5730;default&#x6587;&#x4EF6;</p>
+<p>&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x7684;&#x4F1A;&#x8986;&#x76D6;&#x4F18;&#x5148;&#x7EA7;&#x4F4E;&#x7684;&#x91CD;&#x590D;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x503C;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SpringCloud基础.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: SpringCloud基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SpringCloud学习总结之配置文件","level":"1.3.2","depth":2,"next":{"title":"效率工具","level":"1.4","depth":1,"ref":"","articles":[{"title":"Gitbook安装","level":"1.4.1","depth":2,"path":"效率工具/Gitbook安装.md","ref":"效率工具/Gitbook安装.md","articles":[]},{"title":"Gitbook生成目录SUMMARY文件","level":"1.4.2","depth":2,"path":"效率工具/Gitbook生成目录SUMMARY文件.md","ref":"效率工具/Gitbook生成目录SUMMARY文件.md","articles":[]}]},"previous":{"title":"SpringCloud基础","level":"1.3.1","depth":2,"path":"SpringCloud/SpringCloud基础.md","ref":"SpringCloud/SpringCloud基础.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SpringCloud/SpringCloud学习总结之配置文件.md","mtime":"2021-07-13T17:36:25.511Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-13T17:41:00.969Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
