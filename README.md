@@ -6,7 +6,7 @@
   * [SpringCloud基础](SpringCloud/SpringCloud基础.md)
   * [SpringCloud学习总结之配置文件](SpringCloud/SpringCloud学习总结之配置文件.md)
 - 效率工具
-  * [Gitbook+Github Pages搭建个人文档中心全流程](效率工具/Gitbook+Github Pages搭建个人文档中心全流程.md)
+  * [Gitbook+Github搭建个人文档中心全流程](效率工具/Gitbook+Github搭建个人文档中心全流程.md)
   * [Gitbook安装](效率工具/Gitbook安装.md)
   * [Gitbook生成目录SUMMARY文件](效率工具/Gitbook生成目录SUMMARY文件.md)
 - 数据库
