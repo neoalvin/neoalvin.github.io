@@ -1,14 +1,17 @@
 # Alvin的学习笔记
 
 - Android
-  * [四大组件](Android/四大组件.md)
-- Spring Cloud
+  * [Android基础知识梳理（1）开发环境介绍](Android/Android基础知识梳理（1）开发环境介绍.md)
+  * [Android基础知识梳理（2）项目结构介绍](Android/Android基础知识梳理（2）项目结构介绍.md)
+  * [Android基础知识梳理（3）四大组件之Activity](Android/Android基础知识梳理（3）四大组件之Activity.md)
+- Spring Clouda
   * [SpringCloud基础](SpringCloud/SpringCloud基础.md)
   * [SpringCloud学习总结之配置文件](SpringCloud/SpringCloud学习总结之配置文件.md)
 - 效率工具
   * [Gitbook+Github搭建个人文档中心全流程](效率工具/Gitbook+Github搭建个人文档中心全流程.md)
   * [Gitbook安装](效率工具/Gitbook安装.md)
   * [Gitbook生成目录SUMMARY文件](效率工具/Gitbook生成目录SUMMARY文件.md)
+  * [Typora+PicGo+腾讯云COS构建markdown图床](效率工具/Typora+PicGo+腾讯云COS构建markdown图床.md)
 - 数据库
   * [Windows安装MySQL方法](数据库/Windows安装MySQL方法.md)
 - 算法
@@ -17,13 +20,20 @@
   * [14.最长公共前缀](算法/14.最长公共前缀.md)
   * [15.三数之和](算法/15.三数之和.md)
   * [16.最接近的三数之和](算法/16.最接近的三数之和.md)
+  * [189.旋转数组](算法/189.旋转数组.md)
+  * [198.打家劫舍](算法/198.打家劫舍.md)
+  * [23.合并K个升序链表](算法/23.合并K个升序链表.md)
   * [26.删除有序数组中的重复项](算法/26.删除有序数组中的重复项.md)
+  * [33.搜索旋转排序数组](算法/33.搜索旋转排序数组.md)
   * [43.字符串相乘](算法/43.字符串相乘.md)
   * [5.最长回文子串](算法/5.最长回文子串.md)
   * [509.斐波那契数](算法/509.斐波那契数.md)
   * [53.最大子序和](算法/53.最大子序和.md)
+  * [61.旋转链表](算法/61.旋转链表.md)
+  * [62.不同路径](算法/62.不同路径.md)
   * [7.整数反转](算法/7.整数反转.md)
   * [70.爬楼梯](算法/70.爬楼梯.md)
+  * [740.删除并获得点数](算法/740.删除并获得点数.md)
   * [746.使用最小花费爬楼梯](算法/746.使用最小花费爬楼梯.md)
   * [9.回文数](算法/9.回文数.md)
 - 缓存
