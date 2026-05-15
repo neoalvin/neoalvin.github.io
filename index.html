@@ -138,6 +138,7 @@
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 28px;
       font-size: 14px;
       font-weight: 500;
@@ -148,6 +149,24 @@
       transition: color 0.3s ease;
     }
     .nav-links a:hover { color: var(--text-main); }
+
+    .lang-btn {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-left: 8px;
+    }
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--accent-1);
+      color: var(--accent-1);
+    }
 
     /* Hero Section */
     .hero {
@@ -327,19 +346,6 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 229, 255, 0.05);
     }
 
-    .glass-card h3 {
-      font-size: 18px;
-      margin: 0 0 12px;
-      color: var(--text-main);
-    }
-    .glass-card p {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin: 0;
-      text-align: justify;
-      line-height: 1.6;
-    }
-
     .card-icon {
       width: 48px;
       height: 48px;
@@ -356,6 +362,19 @@
       width: 24px;
       height: 24px;
       stroke-width: 1.5;
+    }
+
+    .glass-card h3 {
+      font-size: 18px;
+      margin: 0 0 12px;
+      color: var(--text-main);
+    }
+    .glass-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0;
+      text-align: justify;
+      line-height: 1.6;
     }
 
     /* Project List */
@@ -460,7 +479,8 @@
       .project-card { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
     }
     @media (max-width: 600px) {
-      .nav-links { display: none; }
+      .nav-links { gap: 12px; }
+      .nav-links a { display: none; }
       .hero h1 { font-size: 40px; }
       .grid-4 { grid-template-columns: 1fr; }
       section { padding: 50px 0; }
@@ -481,9 +501,10 @@
         <span>Alvin</span>
       </a>
       <div class="nav-links">
-        <a href="#expertise">Expertise</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
+        <a href="#expertise" data-i18n="nav_expertise">Expertise</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <button id="lang-toggle" class="lang-btn">EN</button>
       </div>
     </nav>
   </header>
@@ -494,17 +515,17 @@
       <div class="hero-content fade-up delay-1">
         <div class="status-badge">
           <span class="status-dot"></span>
-          AI Agent 技术专家 / 大模型应用架构
+          <span data-i18n="hero_badge">AI Agent 技术专家 / 大模型应用架构</span>
         </div>
-        <h1>
+        <h1 data-i18n="hero_title">
           构建可落地的 <br/>
           <span class="text-gradient">AI Agent 系统</span>
         </h1>
-        <p class="hero-summary">
+        <p class="hero-summary" data-i18n="hero_summary">
           8年大厂研发经验 (腾讯/华为)，深耕 AI Agent 工程化、研效基建与多模态模型工程。致力于连接大模型能力与真实业务场景，打造从架构到全端的高质量工程闭环。
         </p>
         <div class="hero-actions">
-          <a href="mailto:neoalvin@qq.com" class="btn btn-primary">联系我</a>
+          <a href="mailto:neoalvin@qq.com" class="btn btn-primary" data-i18n="hero_contact">联系我</a>
           <a href="https://github.com/neoalvin" target="_blank" class="btn btn-secondary">GitHub</a>
         </div>
       </div>
@@ -532,37 +553,37 @@
     <!-- Expertise -->
     <section id="expertise" class="fade-up delay-3">
       <div class="section-head">
-        <h2>核心优势</h2>
-        <p>全栈视角下的 AI 工程化能力，覆盖模型评估、流程编排与端侧交互。</p>
+        <h2 data-i18n="exp_title">核心优势</h2>
+        <p data-i18n="exp_sub">全栈视角下的 AI 工程化能力，覆盖模型评估、流程编排与端侧交互。</p>
       </div>
       <div class="grid-4">
         <div class="glass-card">
           <div class="card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
           </div>
-          <h3>Agent 架构</h3>
-          <p>主导设计 Multi-Agent Workflow，熟练掌握 RAG 检索增强、复杂工具调用与 MCP / Skills 协议落地。</p>
+          <h3 data-i18n="exp_card1_t">Agent 架构</h3>
+          <p data-i18n="exp_card1_p">主导设计 Multi-Agent Workflow，熟练掌握 RAG 检索增强、复杂工具调用与 MCP / Skills 协议落地。</p>
         </div>
         <div class="glass-card">
           <div class="card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
           </div>
-          <h3>评测闭环</h3>
-          <p>建设 LLM as Judge 评测体系，打通 Case 回放与失败回流机制，驱动模型效果的持续迭代。</p>
+          <h3 data-i18n="exp_card2_t">评测闭环</h3>
+          <p data-i18n="exp_card2_p">建设 LLM as Judge 评测体系，打通 Case 回放与失败回流机制，驱动模型效果的持续迭代。</p>
         </div>
         <div class="glass-card">
           <div class="card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
           </div>
-          <h3>模型工程</h3>
-          <p>具备多模态内容审核经验，包含数据处理、SFT/GRPO 训练参与、推理优化与端到端部署接入。</p>
+          <h3 data-i18n="exp_card3_t">模型工程</h3>
+          <p data-i18n="exp_card3_p">具备多模态内容审核经验，包含数据处理、SFT/GRPO 训练参与、推理优化与端到端部署接入。</p>
         </div>
         <div class="glass-card">
           <div class="card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
           </div>
-          <h3>全栈交付</h3>
-          <p>具备 Python/Go/Java 后端及 React/Electron/Android 前端深度经验，支撑复杂系统的敏捷落地。</p>
+          <h3 data-i18n="exp_card4_t">全栈交付</h3>
+          <p data-i18n="exp_card4_p">具备 Python/Go/Java 后端及 React/Electron/Android 前端深度经验，支撑复杂系统的敏捷落地。</p>
         </div>
       </div>
     </section>
@@ -570,15 +591,15 @@
     <!-- Projects -->
     <section id="projects">
       <div class="section-head">
-        <h2>代表项目</h2>
-        <p>推动前沿技术在真实业务工作流中的大规模应用。</p>
+        <h2 data-i18n="proj_title">代表项目</h2>
+        <p data-i18n="proj_sub">推动前沿技术在真实业务工作流中的大规模应用。</p>
       </div>
       <div class="project-list">
         
         <div class="project-card">
           <div class="project-meta">
             <span class="project-kicker">Agent Platform</span>
-            <h3 class="project-title">智能研效平台</h3>
+            <h3 class="project-title" data-i18n="proj1_t">智能研效平台</h3>
             <div class="tag-list">
               <span class="tag">Multi-Agent</span>
               <span class="tag">Workflow编排</span>
@@ -587,9 +608,9 @@
           </div>
           <div class="project-content">
             <ul>
-              <li>设计并落地面向研发问题分析场景的 Multi-Agent Workflow，覆盖问题理解、上下文检索、工具调用、代码/日志分析与结果汇总。</li>
-              <li>负责核心 Agent 编排、RAG 检索增强及工具权限控制，有效缓解复杂代码库场景下的大模型幻觉及工具调用不可控问题。</li>
-              <li>沉淀通用 Agent 流程与分析模板，支撑 1000+ 团队在线上问题排查、代码理解等场景深度使用。</li>
+              <li data-i18n="proj1_l1">设计并落地面向研发问题分析场景的 Multi-Agent Workflow，覆盖问题理解、上下文检索、工具调用、代码/日志分析与结果汇总。</li>
+              <li data-i18n="proj1_l2">负责核心 Agent 编排、RAG 检索增强及工具权限控制，有效缓解复杂代码库场景下的大模型幻觉及工具调用不可控问题。</li>
+              <li data-i18n="proj1_l3">沉淀通用 Agent 流程与分析模板，支撑 1000+ 团队在线上问题排查、代码理解等场景深度使用。</li>
             </ul>
           </div>
         </div>
@@ -597,7 +618,7 @@
         <div class="project-card">
           <div class="project-meta">
             <span class="project-kicker">LLM Eval</span>
-            <h3 class="project-title">通用模型评测闭环</h3>
+            <h3 class="project-title" data-i18n="proj2_t">通用模型评测闭环</h3>
             <div class="tag-list">
               <span class="tag">LLM as Judge</span>
               <span class="tag">数据飞轮</span>
@@ -605,9 +626,9 @@
           </div>
           <div class="project-content">
             <ul>
-              <li>从 0 到 1 建设模型与 Agent 评测闭环，解决模型能力难量化、Prompt 迭代重度依赖人工经验的痛点。</li>
-              <li>设计评测集管理、自动化打分、人工复核与结果追踪机制，大幅降低大模型和 Prompt 调优的试错成本。</li>
-              <li>沉淀自进化飞轮系统，为模型选型、系统上线前验证提供核心量化依据。</li>
+              <li data-i18n="proj2_l1">从 0 到 1 建设模型与 Agent 评测闭环，解决模型能力难量化、Prompt 迭代重度依赖人工经验的痛点。</li>
+              <li data-i18n="proj2_l2">设计评测集管理、自动化打分、人工复核与结果追踪机制，大幅降低大模型和 Prompt 调优的试错成本。</li>
+              <li data-i18n="proj2_l3">沉淀自进化飞轮系统，为模型选型、系统上线前验证提供核心量化依据。</li>
             </ul>
           </div>
         </div>
@@ -615,7 +636,7 @@
         <div class="project-card">
           <div class="project-meta">
             <span class="project-kicker">Toolchain</span>
-            <h3 class="project-title">全端 AI 提效工具链</h3>
+            <h3 class="project-title" data-i18n="proj3_t">全端 AI 提效工具链</h3>
             <div class="tag-list">
               <span class="tag">Electron</span>
               <span class="tag">IDE Plugin</span>
@@ -624,9 +645,9 @@
           </div>
           <div class="project-content">
             <ul>
-              <li>参与构建覆盖开发者工作流的全场景 AI 助手，涵盖 JetBrains IDE 插件、桌面端及自研 AI 开发平台等形态。</li>
-              <li>在工具链中集成 Agent 范式，围绕工具执行确认、失败重试、沙箱安全与自纠错逻辑进行工程级设计。</li>
-              <li>打通端云协同与本地交互链路，优化代码智能补全、自动排障体验。</li>
+              <li data-i18n="proj3_l1">参与构建覆盖开发者工作流的全场景 AI 助手，涵盖 JetBrains IDE 插件、桌面端及自研 AI 开发平台等形态。</li>
+              <li data-i18n="proj3_l2">在工具链中集成 Agent 范式，围绕工具执行确认、失败重试、沙箱安全与自纠错逻辑进行工程级设计。</li>
+              <li data-i18n="proj3_l3">打通端云协同与本地交互链路，优化代码智能补全、自动排障体验。</li>
             </ul>
           </div>
         </div>
@@ -637,21 +658,21 @@
     <!-- Experience & Skills -->
     <section id="experience">
       <div class="section-head">
-        <h2>工作经历</h2>
-        <p>跨领域积累，从底层系统重构到 AI 原生应用创新。</p>
+        <h2 data-i18n="work_title">工作经历</h2>
+        <p data-i18n="work_sub">跨领域积累，从底层系统重构到 AI 原生应用创新。</p>
       </div>
       
       <div style="margin-bottom: 48px;">
         <div class="project-card" style="margin-bottom: 20px;">
           <div class="project-meta">
             <span class="project-kicker">2022.01 - 至今</span>
-            <h3 class="project-title">腾讯科技（深圳）</h3>
-            <p style="color: var(--text-muted); margin: 0; font-size: 15px;">AI 全栈研发 / 客户端开发</p>
+            <h3 class="project-title" data-i18n="work1_t">腾讯科技（深圳）</h3>
+            <p style="color: var(--text-muted); margin: 0; font-size: 15px;" data-i18n="work1_st">AI 全栈研发 / 客户端开发</p>
           </div>
           <div class="project-content">
             <ul>
-              <li><strong style="color: var(--text-main);">AI 原生阶段:</strong> 聚焦 AI 研效基建与 Agent 工程化。主导问题分析 Agent、评测闭环系统与全端 AI 工具链研发，推进多模态审核大模型工程化落地。</li>
-              <li><strong style="color: var(--text-main);">复杂业务阶段:</strong> 曾负责 QQ 频道 Android 端及音视频创新业务跨端 (Flutter) 架构，独立完成高性能视频发布器底层链路研发。</li>
+              <li data-i18n="work1_l1"><strong style="color: var(--text-main);">AI 原生阶段:</strong> 聚焦 AI 研效基建与 Agent 工程化。主导问题分析 Agent、评测闭环系统与全端 AI 工具链研发，推进多模态审核大模型工程化落地。</li>
+              <li data-i18n="work1_l2"><strong style="color: var(--text-main);">复杂业务阶段:</strong> 曾负责 QQ 频道 Android 端及音视频创新业务跨端 (Flutter) 架构，独立完成高性能视频发布器底层链路研发。</li>
             </ul>
           </div>
         </div>
@@ -659,13 +680,13 @@
         <div class="project-card">
           <div class="project-meta">
             <span class="project-kicker">2017.07 - 2021.12</span>
-            <h3 class="project-title">华为技术有限公司</h3>
-            <p style="color: var(--text-muted); margin: 0; font-size: 15px;">软件开发工程师</p>
+            <h3 class="project-title" data-i18n="work2_t">华为技术有限公司</h3>
+            <p style="color: var(--text-muted); margin: 0; font-size: 15px;" data-i18n="work2_st">软件开发工程师</p>
           </div>
           <div class="project-content">
             <ul>
-              <li>参与网络控制器系统后端研发及微服务 OSGI 架构解耦重构，提升大规模分布式系统稳定性。</li>
-              <li>负责华为相机 APP 核心业务及折叠屏底层适配，处理 Camera2 / MediaCodec 及 NDK 算法深度集成。</li>
+              <li data-i18n="work2_l1">参与网络控制器系统后端研发及微服务 OSGI 架构解耦重构，提升大规模分布式系统稳定性。</li>
+              <li data-i18n="work2_l2">负责华为相机 APP 核心业务及折叠屏底层适配，处理 Camera2 / MediaCodec 及 NDK 算法深度集成。</li>
             </ul>
           </div>
         </div>
@@ -673,8 +694,8 @@
 
       <div class="skills-wrapper" style="margin-top: 56px; padding-top: 40px; border-top: 1px dashed var(--border);">
         <div style="margin-bottom: 24px;">
-          <h3 style="margin: 0 0 8px; font-size: 20px;">技术全景图 (Tech Landscape)</h3>
-          <p style="margin: 0; color: var(--text-muted); font-size: 14px;">涵盖大模型应用研发、后端架构与多端前端开发能力。</p>
+          <h3 style="margin: 0 0 8px; font-size: 20px;" data-i18n="skill_title">技术全景图 (Tech Landscape)</h3>
+          <p style="margin: 0; color: var(--text-muted); font-size: 14px;" data-i18n="skill_sub">涵盖大模型应用研发、后端架构与多端前端开发能力。</p>
         </div>
         <div class="skills-cloud">
           <span class="skill-pill">Multi-Agent Workflow</span>
@@ -700,5 +721,125 @@
       <p>© 2026 Alvin. Designed & Built for AI Agent Engineering.</p>
     </div>
   </footer>
+
+  <script>
+    const i18n = {
+      zh: {
+        nav_expertise: "Expertise",
+        nav_projects: "Projects",
+        nav_experience: "Experience",
+        hero_badge: "AI Agent 技术专家 / 大模型应用架构",
+        hero_title: "构建可落地的 <br/>\n<span class=\"text-gradient\">AI Agent 系统</span>",
+        hero_summary: "8年大厂研发经验 (腾讯/华为)，深耕 AI Agent 工程化、研效基建与多模态模型工程。致力于连接大模型能力与真实业务场景，打造从架构到全端的高质量工程闭环。",
+        hero_contact: "联系我",
+        exp_title: "核心优势",
+        exp_sub: "全栈视角下的 AI 工程化能力，覆盖模型评估、流程编排与端侧交互。",
+        exp_card1_t: "Agent 架构",
+        exp_card1_p: "主导设计 Multi-Agent Workflow，熟练掌握 RAG 检索增强、复杂工具调用与 MCP / Skills 协议落地。",
+        exp_card2_t: "评测闭环",
+        exp_card2_p: "建设 LLM as Judge 评测体系，打通 Case 回放与失败回流机制，驱动模型效果的持续迭代。",
+        exp_card3_t: "模型工程",
+        exp_card3_p: "具备多模态内容审核经验，包含数据处理、SFT/GRPO 训练参与、推理优化与端到端部署接入。",
+        exp_card4_t: "全栈交付",
+        exp_card4_p: "具备 Python/Go/Java 后端及 React/Electron/Android 前端深度经验，支撑复杂系统的敏捷落地。",
+        proj_title: "代表项目",
+        proj_sub: "推动前沿技术在真实业务工作流中的大规模应用。",
+        proj1_t: "智能研效平台",
+        proj1_l1: "设计并落地面向研发问题分析场景的 Multi-Agent Workflow，覆盖问题理解、上下文检索、工具调用、代码/日志分析与结果汇总。",
+        proj1_l2: "负责核心 Agent 编排、RAG 检索增强及工具权限控制，有效缓解复杂代码库场景下的大模型幻觉及工具调用不可控问题。",
+        proj1_l3: "沉淀通用 Agent 流程与分析模板，支撑 1000+ 团队在线上问题排查、代码理解等场景深度使用。",
+        proj2_t: "通用模型评测闭环",
+        proj2_l1: "从 0 到 1 建设模型与 Agent 评测闭环，解决模型能力难量化、Prompt 迭代重度依赖人工经验的痛点。",
+        proj2_l2: "设计评测集管理、自动化打分、人工复核与结果追踪机制，大幅降低大模型和 Prompt 调优的试错成本。",
+        proj2_l3: "沉淀自进化飞轮系统，为模型选型、系统上线前验证提供核心量化依据。",
+        proj3_t: "全端 AI 提效工具链",
+        proj3_l1: "参与构建覆盖开发者工作流的全场景 AI 助手，涵盖 JetBrains IDE 插件、桌面端及自研 AI 开发平台等形态。",
+        proj3_l2: "在工具链中集成 Agent 范式，围绕工具执行确认、失败重试、沙箱安全与自纠错逻辑进行工程级设计。",
+        proj3_l3: "打通端云协同与本地交互链路，优化代码智能补全、自动排障体验。",
+        work_title: "工作经历",
+        work_sub: "跨领域积累，从底层系统重构到 AI 原生应用创新。",
+        work1_t: "腾讯科技（深圳）",
+        work1_st: "AI 全栈研发 / 客户端开发",
+        work1_l1: "<strong style=\"color: var(--text-main);\">AI 原生阶段:</strong> 聚焦 AI 研效基建与 Agent 工程化。主导问题分析 Agent、评测闭环系统与全端 AI 工具链研发，推进多模态审核大模型工程化落地。",
+        work1_l2: "<strong style=\"color: var(--text-main);\">复杂业务阶段:</strong> 曾负责 QQ 频道 Android 端及音视频创新业务跨端 (Flutter) 架构，独立完成高性能视频发布器底层链路研发。",
+        work2_t: "华为技术有限公司",
+        work2_st: "软件开发工程师",
+        work2_l1: "参与网络控制器系统后端研发及微服务 OSGI 架构解耦重构，提升大规模分布式系统稳定性。",
+        work2_l2: "负责华为相机 APP 核心业务及折叠屏底层适配，处理 Camera2 / MediaCodec 及 NDK 算法深度集成。",
+        skill_title: "技术全景图 (Tech Landscape)",
+        skill_sub: "涵盖大模型应用研发、后端架构与多端前端开发能力。"
+      },
+      en: {
+        nav_expertise: "Expertise",
+        nav_projects: "Projects",
+        nav_experience: "Experience",
+        hero_badge: "AI Agent Expert / LLM App Architect",
+        hero_title: "Building Practical <br/>\n<span class=\"text-gradient\">AI Agent Systems</span>",
+        hero_summary: "8 years of R&D experience in top tech companies (Tencent/Huawei), specializing in AI Agent engineering, R&D infrastructure, and multi-modal model engineering. Dedicated to connecting LLM capabilities with real-world business scenarios to build high-quality end-to-end solutions.",
+        hero_contact: "Contact Me",
+        exp_title: "Core Expertise",
+        exp_sub: "AI engineering capabilities from a full-stack perspective, covering model evaluation, workflow orchestration, and client-side interactions.",
+        exp_card1_t: "Agent Architecture",
+        exp_card1_p: "Lead the design of Multi-Agent Workflows, proficient in RAG, complex tool calling, and MCP/Skills protocol implementation.",
+        exp_card2_t: "Eval Loop",
+        exp_card2_p: "Build LLM-as-Judge evaluation systems, establishing failure feedback mechanisms to drive continuous iteration of model performance.",
+        exp_card3_t: "Model Engineering",
+        exp_card3_p: "Experience in multi-modal content moderation, including data processing, SFT/GRPO training, inference optimization, and end-to-end deployment.",
+        exp_card4_t: "Full-Stack Delivery",
+        exp_card4_p: "Deep experience in Python/Go/Java backend and React/Electron/Android frontend, supporting agile delivery of complex systems.",
+        proj_title: "Featured Projects",
+        proj_sub: "Driving large-scale application of cutting-edge technologies in real business workflows.",
+        proj1_t: "Intelligent R&D Platform",
+        proj1_l1: "Designed and implemented Multi-Agent Workflows for R&D issue analysis, covering problem understanding, context retrieval, tool calling, code/log analysis, and result summarization.",
+        proj1_l2: "Responsible for core Agent orchestration, RAG, and tool permission control, effectively mitigating LLM hallucinations in complex codebases.",
+        proj1_l3: "Established generic Agent workflow templates, supporting 1000+ teams in scenarios like online issue troubleshooting and code comprehension.",
+        proj2_t: "Universal Eval Loop",
+        proj2_l1: "Built model and Agent evaluation loops from scratch, solving the pain points of unquantifiable model capabilities and heavily experience-dependent Prompt iteration.",
+        proj2_l2: "Designed evaluation dataset management, automated scoring, manual review, and result tracking mechanisms, significantly reducing trial-and-error costs.",
+        proj2_l3: "Created a self-evolving flywheel system, providing core quantitative basis for model selection and pre-launch verification.",
+        proj3_t: "Omni-channel AI Toolchain",
+        proj3_l1: "Participated in building all-scenario AI assistants covering developer workflows, including JetBrains IDE plugins, desktop apps, and self-developed AI platforms.",
+        proj3_l2: "Integrated Agent paradigms into the toolchain, focusing on engineering designs for tool execution confirmation, failure retries, sandbox security, and self-correction.",
+        proj3_l3: "Bridged cloud-edge collaboration and local interaction links, optimizing intelligent code completion and automated troubleshooting experiences.",
+        work_title: "Work Experience",
+        work_sub: "Cross-domain accumulation, from underlying system refactoring to AI-native application innovation.",
+        work1_t: "Tencent",
+        work1_st: "AI Full-Stack / Client Developer",
+        work1_l1: "<strong style=\"color: var(--text-main);\">AI-Native Phase:</strong> Focus on AI R&D infrastructure and Agent engineering. Lead the development of issue analysis Agents, evaluation systems, and omni-channel AI toolchains.",
+        work1_l2: "<strong style=\"color: var(--text-main);\">Complex Business Phase:</strong> Responsible for QQ Channel Android and cross-platform (Flutter) architecture for audio/video innovative businesses, independently completing the underlying video publisher link.",
+        work2_t: "Huawei Technologies",
+        work2_st: "Software Engineer",
+        work2_l1: "Participated in backend R&D of network controller systems and OSGI microservices decoupling, improving stability of large-scale distributed systems.",
+        work2_l2: "Responsible for Huawei Camera APP core business and foldable screen underlying adaptation, deeply integrating Camera2/MediaCodec and NDK algorithms.",
+        skill_title: "Tech Landscape",
+        skill_sub: "Covering LLM application R&D, backend architecture, and multi-platform frontend development."
+      }
+    };
+
+    const langToggle = document.getElementById('lang-toggle');
+    // Default to 'zh', but load from localStorage if exists
+    let currentLang = localStorage.getItem('site_lang') || 'zh';
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      langToggle.textContent = lang === 'zh' ? 'EN' : '中';
+      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) {
+          el.innerHTML = i18n[lang][key];
+        }
+      });
+    }
+
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'zh' ? 'en' : 'zh';
+      localStorage.setItem('site_lang', currentLang);
+      applyLang(currentLang);
+    });
+
+    // Initialize Language
+    applyLang(currentLang);
+  </script>
 </body>
 </html>
