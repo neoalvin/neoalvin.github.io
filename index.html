@@ -499,15 +499,19 @@
     <nav class="nav">
       <a class="brand" href="#">
         <span class="brand-mark">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 20L12 4L19 20" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="12" cy="15" r="2" fill="var(--accent-1)"/>
-            <defs>
-              <linearGradient id="logo-grad" x1="0" y1="0" x2="24" y2="24">
-                <stop stop-color="var(--accent-1)"/>
-                <stop offset="1" stop-color="var(--accent-2)"/>
-              </linearGradient>
-            </defs>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stars -->
+            <circle cx="4" cy="6" r="0.5" fill="var(--text-muted)"/>
+            <circle cx="10" cy="3" r="0.5" fill="var(--text-muted)"/>
+            <circle cx="20" cy="5" r="0.5" fill="var(--text-muted)"/>
+            <!-- Planet -->
+            <circle cx="18" cy="7" r="2.5" fill="var(--accent-1)" />
+            <!-- Back Mountain -->
+            <path d="M8 20 L15 10 L22 20" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Front Mountain -->
+            <path d="M2 20 L10 6 L18 20 Z" fill="#0a0a0a" stroke="var(--text-main)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Mountain Highlight Line -->
+            <path d="M10 6 L10 20" stroke="var(--text-main)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
         <span>Alvin</span>
