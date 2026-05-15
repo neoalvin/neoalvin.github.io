@@ -128,10 +128,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 36px;
-      padding: 0 4px;
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+      height: 24px;
+      margin-right: 4px;
       transition: transform 0.3s ease;
+    }
+    .brand-mark img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
     }
     .brand:hover .brand-mark {
       transform: scale(1.05);
@@ -499,20 +503,7 @@
     <nav class="nav">
       <a class="brand" href="#">
         <span class="brand-mark">
-          <svg height="22" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="var(--text-main)" stroke-width="2.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10">
-              <!-- > -->
-              <path d="M 6 7 L 13 13 L 6 19" />
-              <!-- A upper + right leg + L base -->
-              <path d="M 19.5 11 L 23 4 L 31 20 L 44 20" />
-              <!-- A lower left + crossbar -->
-              <path d="M 15 20 L 17.5 15 L 29.5 15" />
-              <!-- L vertical -->
-              <path d="M 36 4 L 36 21.3" />
-              <!-- Underscore -->
-              <path d="M 47 20 L 55 20" />
-            </g>
-          </svg>
+          <img src="./logo.png" alt="AL Logo" />
         </span>
         <span>Alvin</span>
       </a>
