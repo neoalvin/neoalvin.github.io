@@ -21,6 +21,23 @@
       --shadow-glow: 0 0 40px rgba(0, 229, 255, 0.15);
       --radius-lg: 24px;
       --radius-md: 16px;
+      --nav-bg: rgba(10, 10, 10, 0.6);
+      --grid-line: rgba(255, 255, 255, 0.03);
+    }
+
+    [data-theme="light"] {
+      --bg: #fdfdfd;
+      --bg-surface: rgba(0, 0, 0, 0.03);
+      --bg-surface-hover: rgba(0, 0, 0, 0.06);
+      --text-main: #171717;
+      --text-muted: #666666;
+      --border: rgba(0, 0, 0, 0.1);
+      --border-hover: rgba(0, 0, 0, 0.2);
+      --accent-1: #0070f3; /* Blue */
+      --accent-2: #7928ca; /* Purple */
+      --shadow-glow: 0 0 40px rgba(0, 112, 243, 0.15);
+      --nav-bg: rgba(253, 253, 253, 0.85);
+      --grid-line: rgba(0, 0, 0, 0.05);
     }
 
     * { box-sizing: border-box; }
@@ -108,7 +125,7 @@
       max-width: 800px;
       height: 60px;
       padding: 0 20px 0 8px;
-      background: rgba(10, 10, 10, 0.6);
+      background: var(--nav-bg);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border);
@@ -165,9 +182,31 @@
       margin-left: 8px;
     }
     .lang-btn:hover {
-      background: rgba(255,255,255,0.1);
+      background: var(--bg-surface-hover);
       border-color: var(--accent-1);
       color: var(--accent-1);
+    }
+
+    .theme-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      margin-left: 8px;
+    }
+    .theme-btn:hover {
+      color: var(--text-main);
+      background: var(--bg-surface-hover);
+    }
+    .theme-btn svg {
+      width: 18px;
+      height: 18px;
     }
 
     /* Hero Section */
@@ -214,7 +253,7 @@
     }
 
     .text-gradient {
-      background: linear-gradient(90deg, var(--accent-1), #b570ff);
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -268,7 +307,7 @@
     /* Terminal Mock */
     .terminal {
       background: #050505;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-md);
       overflow: hidden;
       box-shadow: 0 20px 40px rgba(0,0,0,0.8);
@@ -280,7 +319,7 @@
       gap: 8px;
       padding: 16px 20px;
       background: rgba(255,255,255,0.02);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .term-dot { width: 12px; height: 12px; border-radius: 50%; }
     .term-dot.red { background: #ff5f56; }
@@ -292,13 +331,13 @@
       color: #e2e8f0;
     }
     .term-line { margin: 0 0 12px; }
-    .term-prompt { color: var(--accent-1); margin-right: 8px; }
+    .term-prompt { color: #00e5ff; margin-right: 8px; }
     .term-success { color: #27c93f; margin-right: 8px; }
     .term-comment { color: #64748b; }
     .term-cursor {
       display: inline-block;
       width: 8px; height: 15px;
-      background: var(--text-main);
+      background: #ededed;
       vertical-align: middle;
       animation: blink 1s step-end infinite;
     }
@@ -510,9 +549,9 @@
             <!-- Back Mountain -->
             <path d="M8 20 L15 10 L22 20" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <!-- Front Mountain -->
-            <path d="M2 20 L10 6 L18 20 Z" fill="#0a0a0a" stroke="var(--text-main)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 20 L10 6 L18 20 Z" fill="var(--bg)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <!-- Mountain Highlight Line -->
-            <path d="M10 6 L10 20" stroke="var(--text-main)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 6 L10 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
         <span>Alvin</span>
@@ -521,6 +560,10 @@
         <a href="#expertise" data-i18n="nav_expertise">Expertise</a>
         <a href="#projects" data-i18n="nav_projects">Projects</a>
         <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
         <button id="lang-toggle" class="lang-btn">EN</button>
       </div>
     </nav>
@@ -863,6 +906,36 @@
 
     // Initialize Language
     applyLang(currentLang);
+
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+    
+    let currentTheme = localStorage.getItem('site_theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'light') {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      } else {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      }
+    }
+
+    themeToggle.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('site_theme', currentTheme);
+      applyTheme(currentTheme);
+    });
+
+    applyTheme(currentTheme);
+
   </script>
 </body>
 </html>

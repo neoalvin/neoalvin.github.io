@@ -1,14 +1,28 @@
 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .star { fill: #a3a3a3; }
+    .planet { fill: #00e5ff; }
+    .back-mt { stroke: #a3a3a3; }
+    .front-mt { fill: #0a0a0a; stroke: #ededed; }
+    .hl-line { stroke: #ededed; }
+    @media (prefers-color-scheme: light) {
+      .star { fill: #666666; }
+      .planet { fill: #0070f3; }
+      .back-mt { stroke: #666666; }
+      .front-mt { fill: #fdfdfd; stroke: #171717; }
+      .hl-line { stroke: #171717; }
+    }
+  </style>
   <!-- Stars -->
-  <circle cx="4" cy="6" r="0.5" fill="#a3a3a3"/>
-  <circle cx="10" cy="3" r="0.5" fill="#a3a3a3"/>
-  <circle cx="20" cy="5" r="0.5" fill="#a3a3a3"/>
+  <circle cx="4" cy="6" r="0.5" class="star"/>
+  <circle cx="10" cy="3" r="0.5" class="star"/>
+  <circle cx="20" cy="5" r="0.5" class="star"/>
   <!-- Planet -->
-  <circle cx="18" cy="7" r="2.5" fill="#00e5ff" />
+  <circle cx="18" cy="7" r="2.5" class="planet" />
   <!-- Back Mountain -->
-  <path d="M8 20 L15 10 L22 20" stroke="#a3a3a3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 20 L15 10 L22 20" class="back-mt" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- Front Mountain -->
-  <path d="M2 20 L10 6 L18 20 Z" fill="#0a0a0a" stroke="#ededed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2 20 L10 6 L18 20 Z" class="front-mt" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- Mountain Highlight Line -->
-  <path d="M10 6 L10 20" stroke="#ededed" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 6 L10 20" class="hl-line" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
